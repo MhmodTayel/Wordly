@@ -122,9 +122,57 @@ body {
   }
 }
 
+// .landing,
+// .about {
+//   display: none !important;
+// }
+
 .data {
   width: 100%;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  .input {
+    margin: 0 auto;
+    margin-top: 150px;
+    display: flex;
+    // align-items: center;
+    .text-input {
+      font-size: 22px;
+      padding: 8px 15px;
+      border: 0;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      background-color: rgba(238, 238, 238, 0.644);
+      outline: none;
+    }
+    .select {
+      border: 0;
+      padding: 8px 15px;
+      font-size: 18px;
+      margin: 0;
+      transform: translateX(-2px);
+      background-color: rgba(238, 238, 238, 0.644);
+
+      outline: none;
+      color: #000000b2;
+    }
+    .btn {
+      background-color: #3498db;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      border-radius: 0;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      transform: translateX(-2px);
+      outline: none;
+      transition: 0.2s;
+      &:hover {
+        background-color: #2e83bd;
+      }
+    }
+  }
 }
 
 @keyframes animate {

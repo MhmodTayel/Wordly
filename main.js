@@ -421,5 +421,5 @@ var startWords = [
 ];
 word = startWords[Math.floor(Math.random() * startWords.length)];
 
-enqueue(word);
-expand();
+// enqueue(word);
+// expand();
