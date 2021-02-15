@@ -5,17 +5,21 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: url(../bg.svg) no-repeat;
   background-position: bottom;
 }
 
-.container {
+.landing {
   height: 909px;
   width: 100%;
 }
 
-.container .hero {
+.landing .hero {
   z-index: 3;
   background: url(../corner.svg) no-repeat;
   width: 500px;
@@ -26,11 +30,11 @@ body {
   position: relative;
 }
 
-.container .hero .header {
+.landing .hero .header {
   position: absolute;
 }
 
-.container .hero .header h1 {
+.landing .hero .header h1 {
   /* Wordly */
   z-index: 2;
   position: absolute;
@@ -48,31 +52,32 @@ body {
   color: #0e0d0d;
 }
 
-.container .hero .header p {
+.landing .hero .header p {
   /* for the English Language. Find definitions, related words, and more, with Wordly */
   z-index: 2;
   position: absolute;
-  width: 350px;
+  width: 500px;
   height: 53px;
   left: 81px;
-  top: 144px;
+  top: 444px;
   font-family: Lato;
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
+  font-size: 24px;
   line-height: 22px;
   letter-spacing: 1px;
-  color: #00000052;
+  color: #000000b2;
+  animation: animate 1s forwards;
 }
 
-.container .hero .action {
+.landing .hero .action {
   position: absolute;
-  top: 80%;
+  top: 100%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.container .hero .action .btn {
+.landing .hero .action .btn {
   background-color: #3498db;
   border: 0;
   padding: 10px 20px;
@@ -85,14 +90,19 @@ body {
   width: 120px;
   border-radius: 2px;
   transition: 0.2s;
+  text-decoration: none;
+  font-family: "Poppins";
   outline: none;
+  animation: animate 1s forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
 }
 
-.container .hero .action .btn:hover {
+.landing .hero .action .btn:hover {
   background-color: #2e83bd;
 }
 
-.container #mynetwork {
+.landing #mynetwork {
   z-index: 1;
   position: absolute;
   top: 0;
@@ -101,4 +111,34 @@ body {
   height: 650px;
   opacity: 0.3;
   background-color: #fff;
+}
+
+.about {
+  background-color: #eee;
+  padding: 80px 0;
+}
+
+.about ul {
+  list-style: none;
+}
+
+.about ul a {
+  text-decoration: none;
+  color: #3498db;
+}
+
+.data {
+  width: 100%;
+  height: 100vh;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
