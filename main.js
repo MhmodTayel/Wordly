@@ -154,15 +154,18 @@ const textInput = document.getElementById("text-input");
 const select = document.getElementById("select");
 const getDataBtn = document.getElementById("get-data");
 const outputEl = document.getElementById("output");
+const loader = document.getElementById("loader");
 const links = document.querySelectorAll(".exampleLink");
 
 getDataBtn.addEventListener("click", () => {
+  loader.classList.add("active");
   let input = textInput.value;
   let selectValue = select.value;
   getData(input, selectValue);
 });
 
 function showData(output, option) {
+  loader.classList.remove("active");
   if (output[select.value] == "" || output[select.value] == []) {
     console.log("object");
     outputEl.innerHTML = `<p class="not-found">The ${option} of "${output["word"]}" word <span>not found</span> </p>`;
