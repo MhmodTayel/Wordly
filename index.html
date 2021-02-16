@@ -45,9 +45,9 @@
               Use it to find definitions for more than 150,000 words. Try some:
             </p>
             <ul>
-              <li><a href="#try" class="exampleLink">inevitable</a></li>
-              <li><a href="#try" class="exampleLink">ascendancy</a></li>
-              <li><a href="#try" class="exampleLink">boastful</a></li>
+              <li><a href="#data" class="exampleLink">inevitable</a></li>
+              <li><a href="#data" class="exampleLink">ascendancy</a></li>
+              <li><a href="#data" class="exampleLink">boastful</a></li>
             </ul>
           </div>
           <div class="feature-1-left-col col-md-4 col-xs-12">
@@ -55,13 +55,17 @@
             <p>You can find synonyms, antonyms, or similar words. Try some:</p>
             <ul>
               <li>
-                <a href="#try" class="exampleLink" data-type="synonyms">fast</a>
+                <a href="#data" class="exampleLink" data-type="synonyms"
+                  >fast</a
+                >
               </li>
               <li>
-                <a href="#try" class="exampleLink" data-type="antonyms">warm</a>
+                <a href="#data" class="exampleLink" data-type="antonyms"
+                  >warm</a
+                >
               </li>
               <li>
-                <a href="#try" class="exampleLink" data-type="similarTo"
+                <a href="#data" class="exampleLink" data-type="similarTo"
                   >violet</a
                 >
               </li>
@@ -75,24 +79,28 @@
             <ul>
               <li>
                 a
-                <a href="#try" class="exampleLink" data-type="typeOf"
+                <a href="#data" class="exampleLink" data-type="typeOf"
                   >hatchback</a
                 >
                 is a <strong>type of</strong>
-                <a href="#try" class="exampleLink" data-type="hasTypes">car</a>
+                <a href="#data" class="exampleLink" data-type="hasTypes">car</a>
               </li>
               <li>
                 a
-                <a href="#try" class="exampleLink" data-type="partOf">finger</a>
+                <a href="#data" class="exampleLink" data-type="partOf"
+                  >finger</a
+                >
                 is a <strong>part of</strong> a
-                <a href="#try" class="exampleLink" data-type="hasParts">hand</a>
+                <a href="#data" class="exampleLink" data-type="hasParts"
+                  >hand</a
+                >
               </li>
               <li>
-                <a href="#try" class="exampleLink" data-type="substanceOf"
+                <a href="#data" class="exampleLink" data-type="substanceOf"
                   >oxygen</a
                 >
                 is a <strong>substance of</strong>
-                <a href="#try" class="exampleLink" data-type="hasSubstances"
+                <a href="#data" class="exampleLink" data-type="hasSubstances"
                   >water</a
                 >
               </li>
@@ -146,9 +154,9 @@
           </select>
         </div>
 
-        <a href="#" class="btn">Search</a>
+        <a href="#" class="btn" id="get-data">Get Data</a>
       </div>
-      <div class="output"></div>
+      <div class="output active" id="output"></div>
     </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"

@@ -1,291 +1,17 @@
-// async function getData() {
-//   const res = await fetch("https://wordsapiv1.p.rapidapi.com/words/test", {
-//     method: "GET",
-//     headers: {
-//       "x-rapidapi-key": "125613095emsh816db156e931e2fp1d8034jsnc427110ba6fa",
-//       "x-rapidapi-host": "wordsapiv1.p.rapidapi.com",
-//     },
-//   });
-//   const output = await res.json();
-//   console.log(output);
-// }
-
-// getData();
-
-// let test = {
-//   "word": "test",
-//   "results": [
-//       {
-//           "definition": "trying something to find out about it",
-//           "partOfSpeech": "noun",
-//           "synonyms": [
-//               "trial",
-//               "trial run",
-//               "tryout"
-//           ],
-//           "typeOf": [
-//               "experimentation",
-//               "experiment"
-//           ],
-//           "hasTypes": [
-//               "trial balloon",
-//               "road test",
-//               "alpha test",
-//               "field test",
-//               "field trial",
-//               "beta test"
-//           ]
-//       },
-//       {
-//           "definition": "any standardized procedure for measuring sensitivity or memory or intelligence or aptitude or personality etc",
-//           "partOfSpeech": "noun",
-//           "synonyms": [
-//               "mental test",
-//               "mental testing",
-//               "psychometric test"
-//           ],
-//           "typeOf": [
-//               "mental measurement"
-//           ],
-//           "hasTypes": [
-//               "sub-test",
-//               "personality test",
-//               "intelligence test",
-//               "iq test"
-//           ],
-//           "examples": [
-//               "the test was standardized on a large sample of students"
-//           ]
-//       },
-//       {
-//           "definition": "a set of questions or exercises evaluating skill or knowledge",
-//           "partOfSpeech": "noun",
-//           "synonyms": [
-//               "exam",
-//               "examination"
-//           ],
-//           "typeOf": [
-//               "communicating",
-//               "communication"
-//           ],
-//           "hasTypes": [
-//               "entrance exam",
-//               "bar exam",
-//               "bar examination",
-//               "comp",
-//               "comprehensive",
-//               "comprehensive examination",
-//               "entrance examination",
-//               "exam paper",
-//               "examination paper",
-//               "final",
-//               "final exam",
-//               "final examination",
-//               "litmus test",
-//               "midterm",
-//               "midterm exam",
-//               "midterm examination",
-//               "oral",
-//               "oral exam",
-//               "oral examination",
-//               "prelim",
-//               "preliminary exam",
-//               "preliminary examination",
-//               "question sheet",
-//               "quiz",
-//               "test paper",
-//               "tripos",
-//               "viva",
-//               "viva voce"
-//           ],
-//           "examples": [
-//               "when the test was stolen the professor had to make a new set of questions"
-//           ]
-//       },
-//       {
-//           "definition": "test or examine for the presence of disease or infection",
-//           "partOfSpeech": "verb",
-//           "synonyms": [
-//               "screen"
-//           ],
-//           "typeOf": [
-//               "check"
-//           ]
-//       },
-//       {
-//           "definition": "examine someone's knowledge of something",
-//           "partOfSpeech": "verb",
-//           "synonyms": [
-//               "quiz"
-//           ],
-//           "typeOf": [
-//               "examine"
-//           ],
-//           "derivation": [
-//               "testee",
-//               "testing",
-//               "tester"
-//           ],
-//           "examples": [
-//               "The teacher tests us every week"
-//           ]
-//       },
-//       {
-//           "definition": "put to the test, as for its quality, or give experimental use to",
-//           "partOfSpeech": "verb",
-//           "synonyms": [
-//               "essay",
-//               "examine",
-//               "prove",
-//               "try",
-//               "try out"
-//           ],
-//           "typeOf": [
-//               "judge",
-//               "pass judgment",
-//               "evaluate"
-//           ],
-//           "hasTypes": [
-//               "float",
-//               "control",
-//               "verify",
-//               "field-test"
-//           ],
-//           "derivation": [
-//               "testing"
-//           ]
-//       },
-//       {
-//           "definition": "the act of testing something",
-//           "partOfSpeech": "noun",
-//           "synonyms": [
-//               "run",
-//               "trial"
-//           ],
-//           "typeOf": [
-//               "effort",
-//               "attempt",
-//               "endeavor",
-//               "endeavour",
-//               "try"
-//           ],
-//           "hasTypes": [
-//               "try-on",
-//               "ministry of transportation test",
-//               "mot",
-//               "mot test",
-//               "audition",
-//               "pilot program",
-//               "pilot project",
-//               "preclinical phase",
-//               "preclinical test",
-//               "preclinical trial",
-//               "snellen test",
-//               "assay",
-//               "clinical test",
-//               "trying on",
-//               "tryout",
-//               "field trial",
-//               "fitting",
-//               "double blind",
-//               "clinical trial"
-//           ]
-//       },
-//       {
-//           "definition": "the act of undergoing testing",
-//           "partOfSpeech": "noun",
-//           "synonyms": [
-//               "trial"
-//           ],
-//           "typeOf": [
-//               "try",
-//               "endeavour",
-//               "endeavor",
-//               "effort",
-//               "attempt"
-//           ],
-//           "examples": [
-//               "he survived the great test of battle"
-//           ]
-//       },
-//       {
-//           "definition": "achieve a certain score or rating on a test",
-//           "partOfSpeech": "verb",
-//           "typeOf": [
-//               "score"
-//           ],
-//           "examples": [
-//               "She tested high on the LSAT and was admitted to all the good law schools"
-//           ]
-//       },
-//       {
-//           "definition": "a hard outer covering as of some amoebas and sea urchins",
-//           "partOfSpeech": "noun",
-//           "typeOf": [
-//               "natural covering",
-//               "cover",
-//               "covering"
-//           ]
-//       },
-//       {
-//           "definition": "determine the presence or properties of (a substance)",
-//           "partOfSpeech": "verb",
-//           "typeOf": [
-//               "learn",
-//               "check",
-//               "determine",
-//               "see",
-//               "ascertain",
-//               "watch",
-//               "find out"
-//           ],
-//           "derivation": [
-//               "testing"
-//           ]
-//       },
-//       {
-//           "definition": "show a certain characteristic when tested",
-//           "partOfSpeech": "verb",
-//           "typeOf": [
-//               "be"
-//           ],
-//           "derivation": [
-//               "testing"
-//           ],
-//           "examples": [
-//               "He tested positive for HIV"
-//           ]
-//       },
-//       {
-//           "definition": "undergo a test",
-//           "partOfSpeech": "verb",
-//           "typeOf": [
-//               "submit",
-//               "take"
-//           ],
-//           "verbGroup": [
-//               "quiz"
-//           ],
-//           "derivation": [
-//               "testee"
-//           ],
-//           "examples": [
-//               "She doesn't test well"
-//           ]
-//       }
-//   ],
-//   "syllables": {
-//       "count": 1,
-//       "list": [
-//           "test"
-//       ]
-//   },
-//   "pronunciation": {
-//       "all": "tɛst"
-//   },
-//   "frequency": 4.9
-// }
-// console.log(test.results[1]);
+async function getData(word, select) {
+  const res = await fetch(
+    `https://wordsapiv1.p.rapidapi.com/words/${word}/${select}`,
+    {
+      method: "GET",
+      headers: {
+        "x-rapidapi-key": "125613095emsh816db156e931e2fp1d8034jsnc427110ba6fa",
+        "x-rapidapi-host": "wordsapiv1.p.rapidapi.com",
+      },
+    }
+  );
+  const output = await res.json();
+  showData(output, select);
+}
 
 var container = document.getElementById("mynetwork");
 var nodes = new vis.DataSet([]);
@@ -423,3 +149,93 @@ word = startWords[Math.floor(Math.random() * startWords.length)];
 
 // enqueue(word);
 // expand();
+
+const textInput = document.getElementById("text-input");
+const select = document.getElementById("select");
+const getDataBtn = document.getElementById("get-data");
+const outputEl = document.getElementById("output");
+const links = document.querySelectorAll(".exampleLink");
+
+getDataBtn.addEventListener("click", () => {
+  let input = textInput.value;
+  let selectValue = select.value;
+  getData(input, selectValue);
+});
+
+function showData(output, option) {
+  if (output[select.value] == "" || output[select.value] == []) {
+    console.log("object");
+    outputEl.innerHTML = `<p class="not-found">The ${option} of "${output["word"]}" word <span>not found</span> </p>`;
+  } else {
+    outputEl.innerHTML = "";
+    var str = JSON.stringify(output, undefined, 4);
+    outputEl.appendChild(
+      document.createElement("pre")
+    ).innerHTML = syntaxHighlight(str);
+  }
+}
+
+function syntaxHighlight(json) {
+  if (typeof json != "string") {
+    json = JSON.stringify(json, undefined, 2);
+  }
+  json = json
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+  return json.replace(
+    /("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g,
+    function (match) {
+      var cls = "number";
+      if (/^"/.test(match)) {
+        if (/:$/.test(match)) {
+          cls = "key";
+        } else {
+          cls = "string";
+        }
+      } else if (/true|false/.test(match)) {
+        cls = "boolean";
+      } else if (/null/.test(match)) {
+        cls = "null";
+      }
+      let output = '<span class="' + cls + '">' + match + "</span>";
+
+      return output;
+    }
+  );
+}
+
+let pre = `<pre class="faded">{
+  <span class="key">"word":</span> <span class="string">"example"</span>,
+  <span class="key">"results":</span> [
+      {
+          <span class="key">"definition":</span> <span class="string">"a representative form or pattern"</span>,
+          <span class="key">"partOfSpeech":</span> <span class="string">"noun"</span>,
+          ],
+          <span class="key">"typeOf":</span> [
+              <span class="string">"representation"</span>,
+              <span class="string">"internal representation"</span>,
+              <span class="string">"mental representation"</span>
+          ],
+
+  ],
+  <span class="key">"syllables":</span> {
+      <span class="key">"count":</span> <span class="number">3</span>,
+      <span class="key">"list":</span> [
+          <span class="string">"ex"</span>,
+      ]
+  },
+  <span class="key">"pronunciation":</span> {
+      <span class="key">"all":</span> <span class="string">"ɪɡ'zæmpəl"</span>
+  },
+  <span class="key">"frequency":</span> <span class="number">4.67</span>
+}</pre>`;
+
+outputEl.innerHTML = pre;
+
+links.forEach((link) => {
+  link.addEventListener("click", () => {
+    textInput.value = link.innerHTML;
+    getDataBtn.click();
+  });
+});

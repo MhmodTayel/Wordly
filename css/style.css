@@ -127,17 +127,13 @@ body {
   color: #3498db;
 }
 
-.landing,
-.about {
-  display: none !important;
-}
-
 .data {
   width: 80%;
   margin: 0 auto;
-  height: 100vh;
+  margin-bottom: 250px;
   display: grid;
   grid-template-columns: 1fr 3fr;
+  grid-gap: 150px;
 }
 
 .data .input {
@@ -192,6 +188,62 @@ body {
 
 .data .input .btn:hover {
   background-color: #2e83bd;
+}
+
+.data .output {
+  margin-top: 98px;
+  box-shadow: 2px 5px 10px 0 rgba(0, 0, 0, 0.2);
+  padding: 5px;
+  border-radius: 5px;
+  height: 560px;
+}
+
+.data .output .not-found {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 250px;
+  font-size: 25px;
+}
+
+.data .output .not-found span {
+  color: red;
+  margin-left: 3px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.data .output pre {
+  padding: 15px;
+  margin: 5px;
+  border-radius: 5px;
+  width: 1000px;
+  height: 540px;
+}
+
+.data .output pre.faded {
+  opacity: 0.3;
+}
+
+.data .output .string {
+  color: #cb0000;
+}
+
+.data .output .number {
+  color: darkorange;
+}
+
+.data .output .boolean {
+  color: blue;
+}
+
+.data .output .null {
+  color: magenta;
+}
+
+.data .output .key {
+  color: #940092;
 }
 
 @keyframes animate {
