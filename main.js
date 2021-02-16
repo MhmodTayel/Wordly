@@ -83,7 +83,7 @@ function randomWord() {
 
 async function expand() {
   let word = randomWord();
-  console.log(word);
+
   const res = await fetch(
     `https://wordsapiv1.p.rapidapi.com/words/${word.word}`,
     {
@@ -100,7 +100,6 @@ async function expand() {
   drawWord(word);
 
   function may(data) {
-    console.log(data);
     if (data.results) {
       var toGet = [];
       data.results.forEach((result, i) => {
@@ -119,7 +118,7 @@ async function expand() {
       });
     }
     if (nodes.get().length < maxWords) {
-      setTimeout(expand, 400);
+      setTimeout(expand, 100);
     }
   }
 }
@@ -147,8 +146,8 @@ var startWords = [
 ];
 word = startWords[Math.floor(Math.random() * startWords.length)];
 
-// enqueue(word);
-// expand();
+enqueue(word);
+expand();
 
 const textInput = document.getElementById("text-input");
 const select = document.getElementById("select");
@@ -158,17 +157,26 @@ const loader = document.getElementById("loader");
 const links = document.querySelectorAll(".exampleLink");
 
 getDataBtn.addEventListener("click", () => {
-  loader.classList.add("active");
   let input = textInput.value;
   let selectValue = select.value;
-  getData(input, selectValue);
+
+  if (input == "") {
+    Swal.fire({
+      icon: "error",
+      title: "Please enter a word!",
+    });
+  } else {
+    loader.classList.add("active");
+    getData(input, selectValue);
+  }
 });
 
 function showData(output, option) {
   loader.classList.remove("active");
   if (output[select.value] == "" || output[select.value] == []) {
-    console.log("object");
     outputEl.innerHTML = `<p class="not-found">The ${option} of "${output["word"]}" word <span>not found</span> </p>`;
+  } else if (output["success"] == false) {
+    outputEl.innerHTML = `<p class="not-found">The "${textInput.value}" word <span>not found</span> </p>`;
   } else {
     outputEl.innerHTML = "";
     var str = JSON.stringify(output, undefined, 4);
