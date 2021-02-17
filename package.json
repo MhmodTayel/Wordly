@@ -1,0 +1,22 @@
+{
+  "name": "wordly",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MhmodTayel/Wordly.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MhmodTayel/Wordly/issues"
+  },
+  "homepage": "https://github.com/MhmodTayel/Wordly#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  }
+}
