@@ -1,12 +1,14 @@
-require("dotenv").config();
+// require("dotenv").config();
 async function getData(word, select) {
   const res = await fetch(
     `https://wordsapiv1.p.rapidapi.com/words/${word}/${select}`,
     {
       method: "GET",
       headers: {
-        "x-rapidapi-key": process.env.X_RAPIDAPI_KEY,
-        "x-rapidapi-host": process.env.X_RAPIDAPI_HOST,
+//         "x-rapidapi-key": process.env.X_RAPIDAPI_KEY,
+//         "x-rapidapi-host": process.env.X_RAPIDAPI_HOST,
+        "x-rapidapi-key": "125613095emsh816db156e931e2fp1d8034jsnc427110ba6fa",
+        "x-rapidapi-host": "wordsapiv1.p.rapidapi.com",
       },
     }
   );
@@ -90,8 +92,10 @@ async function expand() {
     {
       method: "GET",
       headers: {
-        "x-rapidapi-key": process.env.X_RAPIDAPI_KEY,
-        "x-rapidapi-host": process.env.X_RAPIDAPI_HOST,
+//         "x-rapidapi-key": process.env.X_RAPIDAPI_KEY,
+//         "x-rapidapi-host": process.env.X_RAPIDAPI_HOST,
+        "x-rapidapi-key": "125613095emsh816db156e931e2fp1d8034jsnc427110ba6fa",
+        "x-rapidapi-host": "wordsapiv1.p.rapidapi.com",
       },
     }
   );
